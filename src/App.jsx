@@ -6,15 +6,17 @@ import HomePage from "./pages/HomePage";
 import CompanyPage from "./pages/CompanyPage";
 import TechnologyPage from "./pages/TechnologyPage";
 import { Routes, Route } from "react-router-dom";
+import { useState } from "react";
 
 function App() {
 
-  
+  const [company, setCompany] = useState(companies)
+
   return (
       <div className="App">
     <Navbar />
     <Routes>
-      <Route path="/" element={<HomePage />}></Route>
+      <Route path="/" element={<HomePage company={company}/>}></Route>
       <Route path="/company/:companySlug" element={<CompanyPage />}></Route>
       <Route path="/tech/:slug" element={<TechnologyPage />}></Route>
     </Routes>
