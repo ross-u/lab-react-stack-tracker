@@ -6,7 +6,7 @@ function HomePage({ company }) {
       <h1>StackTracker: Discover Tech Stacks Used by Top Companies</h1>
       <div className="card-container">
         {company.map((company) => (
-          <Link className="company-card" key={company.id}>
+          <Link to={`/company/${company.slug}`} className="company-card" key={company.id}>
             {company.name}
             <img src={company.logo} alt={company.name} />
           </Link>

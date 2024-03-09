@@ -9,17 +9,21 @@ import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
 
 function App() {
-
-  const [company, setCompany] = useState(companies)
+  const [company, setCompany] = useState(companies);
 
   return (
-      <div className="App">
-    <Navbar />
-    <Routes>
-      <Route path="/" element={<HomePage company={company}/>}></Route>
-      <Route path="/company/:companySlug" element={<CompanyPage />}></Route>
-      <Route path="/tech/:slug" element={<TechnologyPage />}></Route>
-    </Routes>
+    <div className="App">
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HomePage company={company} />} />
+
+        <Route
+          path="/company/:companySlug"
+          element={<CompanyPage company={company} />}
+        />
+
+        <Route path="/tech/:slug" element={<TechnologyPage />} />
+      </Routes>
     </div>
   );
 }
