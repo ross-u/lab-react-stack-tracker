@@ -1,4 +1,6 @@
 import "./App.css";
+import companies from './companies.json'
+import technologies from './technologies.json'
 
 function App() {
   return (
