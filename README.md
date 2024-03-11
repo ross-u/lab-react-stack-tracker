@@ -381,9 +381,9 @@ For each technology, display its `name` and `image`, and wrap them in a React Ro
 
 ---
 
-### Iteration 6 | Technology Details
+### Bonus: Iteration 6 | Technology Details
 
-In this iteration, you will work on the `TechologyPage` component to display the information of a specific technology.
+In this iteration, you will work on the `TechologyPage` component to display information about a specific technology.
 
 The component should take 1 prop:
 
@@ -485,16 +485,19 @@ To set up the React Router in your React application, follow these steps:
 npm install react-router-dom
 ```
 
-2. Import the `BrowserRouter` component in your app's entry point (usually `index.js`) and wrap your `<App />` component with it:
+2. Import the `BrowserRouter` component in your app's entry point (usually `main.jsx`) and wrap your `<App />` component with it:
 
 ```jsx
 import { BrowserRouter as Router } from "react-router-dom";
 
-ReactDOM.render(
-  <Router>
-    <App />
-  </Router>,
-  document.getElementById("root")
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(
+  <React.StrictMode>
+    <Router>
+      <App />
+    </Router>
+  </React.StrictMode>
 );
 ```
 
